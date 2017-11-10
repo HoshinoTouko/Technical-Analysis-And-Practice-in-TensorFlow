@@ -19,12 +19,12 @@ display_step = 1 # 每隔多少轮显示一次训练结果
 examples_to_show = 10 # 提示从测试集中选择10张图片取验证自动编码器的结果
 
 
-# 定义输入数据，无监督不需要标注数据，所以只有输入图片
-X = tf.placeholder("float", [None, n_input])
 # 网络参数
 n_hidden_1 = 256 # 第一个隐藏层神经元个数（特征值格式）
 n_hidden_2 = 128 # 第二个隐藏层神经元格式
 n_input = 784 # 输入数据的特征个数  28*28=784
+# 定义输入数据，无监督不需要标注数据，所以只有输入图片
+X = tf.placeholder("float", [None, n_input])
 
 #初始化每一层的权重和偏置
 weights = {
